@@ -28,7 +28,7 @@ const EditData = ({ item, onBackButtonClick }) => {
     const rightToolbarNew = () => {
         return (
             <React.Fragment>
-                <h5>Edit Galary</h5>
+                <h5>Edit Gallery</h5>
             </React.Fragment>
         );
     };

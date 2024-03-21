@@ -31,6 +31,7 @@ export default function page() {
     const toast = useRef<Toast>(null);
     const message = useRef<Messages>(null);
     const [currentTime, setCurrentTime] = useState('');
+    const [currentDeta, setCurrentDate] = useState('');
 
     type GalleryItem = {
         id: number;
@@ -71,11 +72,11 @@ export default function page() {
         const interval = setInterval(() => {
             const now = new Date();
             setCurrentTime(now.toLocaleTimeString());
-          }, 1000);
-      
-          return () => {
+        }, 1000);
+
+        return () => {
             clearInterval(interval);
-          };
+        };
     }, []);
 
     useEffect(() => {
@@ -241,8 +242,10 @@ export default function page() {
     return (
         <div className="grid mt-2">
             <div className="card p-fluid w-full">
-                <h5>Galey</h5>
-                <p>Current Time: {currentTime}</p>
+                <h5 className=" w-full flex justify-content-between">
+                    Galley <span className=" rounded-1">{currentTime}</span>
+                </h5>
+                {/* <p>Current Time: {currentTime}</p> */}
                 {!displayNewForm && displayListData && !displayEditData && (
                     <>
                         <Toolbar className="mb-4" left={leftToolbarTemplate} center={centerToolbarTemplate} right={rightToolbarTemplate}></Toolbar>

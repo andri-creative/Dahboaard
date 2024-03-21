@@ -34,7 +34,7 @@ const AppMenu = () => {
                 { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
                 { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
                 { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' },
-                { label: 'Galery', icon: 'pi pi-fw pi-bars', to: '/uikit/galery' }
+                { label: 'Gallery', icon: 'pi pi-fw pi-image', to: '/uikit/galery' }
             ]
         },
         {
@@ -161,6 +161,14 @@ const AppMenu = () => {
                     icon: 'pi pi-fw pi-search',
                     url: 'https://github.com/primefaces/sakai-react',
                     target: '_blank'
+                }
+            ]
+        },
+        {
+            label: 'User',
+            items: [
+                {
+                    label: 'Profile', icon: 'pi pi-fw pi-user', to: '/user'
                 }
             ]
         }
